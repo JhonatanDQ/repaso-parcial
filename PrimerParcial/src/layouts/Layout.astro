@@ -1,0 +1,119 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import { Icon } from 'astro-icon/components';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body class="bg-slate-100">
+		<!-- HEADER Y NAVBAR -->
+		<div class="bg-white h-16 flex items-center">
+			<header class="flex justify-between container max-w-6xl mx-auto">
+				<h1 class="cursor-pointer text-2xl"> <span class="text-blue-500 font-bold">H.</span><span class="font-semibold font-sans">Phone</span></h1>
+				<menu>
+					<ul class="flex space-x-4 text-xl">
+						<li class="border-b-2 border-dotted border-blue-500 cursor-pointer font-semibold text-blue-500">Home</li>
+						<li class="font-semibold font-sans cursor-pointer">Shop</li>
+						<li class="font-semibold font-sans cursor-pointer">Product</li>
+						<li class="font-semibold font-sans cursor-pointer">Blog</li>
+						<li class="font-semibold font-sans cursor-pointer">Contact</li>
+					</ul>
+				</menu>
+				<div class="flex space-x-3 cursor-pointer">
+					<Icon name="mdi:cart-outline" size={23}/>
+					<Icon name="mdi:search" size={23} />
+					<Icon name="mdi:user" size={23}/>
+				</div>
+			</header>
+		</div>
+		<!-- BANNER -->
+		
+		<div class="bg-white shadow-lg border rounded-2xl mt-6 max-w-6xl container mx-auto shadow-slate-200 p-5">
+			<div class="grid grid-cols-2 justify-center mt-10">
+				<div class="h-64 w-64 bg-[url('https://as-images.apple.com/is/MME73_AV2?wid=1000&hei=1000&fmt=jpeg&qlt=95&.v=1632861338000')] bg-[length:140%_140%] bg-center mx-auto"> 
+				</div>
+				<div>
+					<span class="font-bold text-sm font-sans bg-slate-100 border rounded-full px-3 pb-1 ">New</span>
+					<h1 class="text-5xl font-bold mt-2">Apple AirPods</h1>
+					<span class="cursor-pointer bg-gradient-to-r from-blue-500 to-sky-500 border rounded-xl text-3xl text-white py-3 px-4 mt-4 inline-block">3rd Generation</span>
+					<div class="flex mt-2">
+						<span class="bg-slate-200 w-3 rounded-full h-11 mt-3 mr-2"></span>
+						<p class="flex items-center justify-center mt-3 text-slate-600 font-semibold text-balance">Personalized Spatial Audio with dynamic head tracking places sound all around you</p>
+					</div>
+				</div>
+				
+			</div>
+			<div>
+				<div class="bg-white max-w-6xl mt-12 flex mx-auto container p-6 shadow-lg justify-between items-center mb-3 ">
+					<div class="text-slate-500">
+						<span class="font-semibold"> <a class="text-blue-500 font-bold">Wireless forbuds</a> with lightning Charging Case. Spatial Audio</span>
+					</div>
+					<div class="flex space-x-2 border rounded-xl">
+						<div class="bg-slate-100 flex cursor-pointer">
+							<Icon name="mdi:chevron-left" size={40} />
+						</div>
+						<div class="bg-slate-100 flex cursor-pointer">
+							<Icon name="mdi:chevron-right" size={40}/>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- ARTICULOS -->
+		<div class="container max-w-6xl mx-auto mt-10 grid grid-cols-4 gap-8">
+			<div class="bg-white shadow shadow-slate-200 rounded-lg p-4">
+				 <div class="bg-[url('https://m.media-amazon.com/images/I/61WnTqb1MrL.jpg')] bg-center bg-[length:100%_100%] mx-auto h-48 w-48"></div>
+				 <p class="text-blue-600 font-bold cursor-pointer bg-slate-100 text-center py-1 border rounded-lg">
+					3rd Generation
+				 </p>
+			</div>
+			<div class="bg-white shadow shadow-slate-200 rounded-lg p-4">
+				 <div class="bg-[url('https://tiendasishop.com/media/catalog/product/m/v/mv7n2lz_a_1.jpg')] bg-center bg-[length:100%_100%] mx-auto h-48 w-48"></div>
+				 <p class="text-blue-600 font-bold cursor-pointer bg-slate-100 text-center py-1 border rounded-lg">
+					Airpods
+				 </p>
+			</div>
+			<div class="bg-white shadow shadow-slate-200 rounded-lg p-4">
+				 <div class="bg-[url('https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MME73?wid=2000&hei=2000&fmt=jpeg&qlt=95&.v=1632861342000')] bg-center bg-[length:100%_100%] mx-auto h-48 w-48"></div>
+				 <p class="text-blue-600 font-bold cursor-pointer bg-slate-100 text-center py-1 border rounded-lg">
+					2nd Generation
+				</p> 
+			</div>
+			<div class="bg-white shadow shadow-slate-200 rounded-lg p-4">
+				 <div class="bg-[url('https://tiendasishop.com/media/catalog/product/m/g/mgyj3am_a.jpg')] bg-center bg-[length:100%_100%] mx-auto h-48 w-48"></div>
+				 <p class="text-blue-600 font-bold cursor-pointer bg-slate-100 text-center py-1 border rounded-lg">
+					AirPods Max
+				 </p>
+			</div>
+		</div>
+		<!-- Newerest Product -->
+		<div class="mt-12 text-center h-52">
+			<h1 class="font-semibold text-3xl mt-10 inline-block">
+				<span class="text-blue-600">Newest</span>
+				Product
+			</h1>
+			<h3 class="text-center text-slate-500 mt-4 text-balance text-xl text-semibold">
+				Personalized Spatial Audio with dynamic head tracking places sound all around you
+			</h3>
+		</div>
+		<footer class="flex h-64 bg-[#161617] mx-auto items-center text-white">
+			<div class="flex container max-w-6xl mx-auto">
+				Apple Inc. 2024.
+			</div>
+		</footer>
+	</body>
+</html>
